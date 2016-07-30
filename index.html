@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GocHack project</title>
+	<meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="reset.css">
+    <link href='https://fonts.googleapis.com/css?family=Asap|Merriweather+Sans|Montserrat+Alternates' rel='stylesheet' type='text/css'>
+    <style>
+        /*body { margin:0; padding:0; }*/
+        .flex-container {
+        	display: flex;
+        	flex-direction: column;
+        }
+        nav {
+        	background-image: url("http://i.imgur.com/deLU1WD.jpg");
+        	background-repeat: no-repeat;
+   				background-size: 100% 100%;
+        }
+        	nav ul {
+        		list-style-type: none;
+        		display: flex;
+        		height: 10rem;
+        	}
+        	nav li {
+        		flex: 1 0 0;
+        		border-top: 5px #FFD000 solid;
+        		padding: 10px;
+        		text-align: center;
+        		background: linear-gradient(280deg, rgba(224, 224, 206, 0.2) 0%, transparent 40%) white;
+        		transition: all 250ms ease-in-out;
+        		box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        		font-family: 'Asap', sans-serif;
+        		font-size: 3rem;
+        	} 
+        	/*Nav bar*/
+        		nav li img {
+        			max-width: 100%;
+        		}
+        		nav .logo {
+							transform: rotate(-4deg) translateY(10px) translateZ(0)
+        		}
+        		nav .logo:hover {
+							transform: rotate(-4deg) translateY(25px) translateZ(0)
+        		}
+        		nav .description {
+							transform: rotate(-2deg) translateY(50px) translateZ(0);
+        		}
+        		nav .description:hover {
+        			transform: rotate(-2deg) translateY(65px) translateZ(0);: 
+        		}
+        		nav .visualisation {
+							transform: rotate(3deg) translateY(40px) translateZ(0);
+        		}
+        		nav .visualisation:hover {
+							transform: rotate(3deg) translateY(55px) translateZ(0);
+        		}
+        		nav .team {
+							transform: rotate(-6deg) translateY(30px) translateX(-10px) translateZ(0)
+        		}
+        		nav .team:hover {
+							transform: rotate(-6deg) translateY(45px) translateX(-10px) translateZ(0)
+        		}
+
+        #description {
+ 					display: flex;
+        	background-color: #1B2845; 
+        	min-height: 100vh;
+        	z-index: 1;
+        	align-items: center;
+  				justify-content: center;
+  				flex-direction: column;
+        }
+        #visualisation {
+        	display: flex;
+        	background-color: #474747;
+        	min-height: 100vh;
+        }
+        #map {
+        	position:relative;
+        	/*top:0;*/
+        	/*bottom:0;*/
+        	width:100%;
+        	/*height: 80vh;*/
+        	flex: 4 0 0;
+        }
+        .menu {
+					flex: 1 0 0;
+        }
+
+        #description article {
+        	flex: .9 0 0;
+        	background-color: #E0E0CE;
+			    max-width: 90%;
+			    max-height: 80%;
+			    box-shadow: 0 10px 40px rgba(0, 0, 0, 1);
+			    padding: 1rem;       	
+        }
+        h1 {
+        	font-family: 'Cabin', sans-serif;
+        	font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+	<div class="flex-container">
+		<nav>
+			<ul>
+				<li class="logo">
+					<a href="https://www.govhack.org/"><img src="http://i.imgur.com/RJ0INUX.png" alt="GovHack logo"></a>
+				</li>
+				<li class="description">
+					<a href="#description">
+						<span>Problem</span>
+					</a>
+				</li>
+				<li class="visualisation">
+					<a href="#visualisation">
+						<span>Solution</span>
+					</a>					
+				</li>
+				<li class="team">
+					<a href="#team">
+						<span>Team</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<section id="description">
+			<article>
+				<h1>The problem we face</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolorum illum iure ad natus culpa ipsa aliquam magnam veritatis quae et, esse autem excepturi iste rem fugiat laboriosam officia blanditiis!</p>
+			</article>
+		</section>	
+		<section id="visualisation">
+			<div id='map'></div>
+			<aside class="menu">
+				<select>
+				  <option value="Dataset1">DataSet1</option>
+				  <option value="Dataset2">Dataset2</option>
+				  <option value="Dataset3">Dataset3</option>
+				  <option value="Dataset4">Dataset4</option>
+				</select>
+			</aside>			
+		</section>
+		<section id="team">	
+		</section>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
