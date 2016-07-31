@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>GocHack project</title>
+	<title>GovHack project</title>
 	<meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="reset.css">
     <link href='https://fonts.googleapis.com/css?family=Asap|Merriweather+Sans|Montserrat+Alternates' rel='stylesheet' type='text/css'>
     <style>
-        /*body { margin:0; padding:0; }*/
+				*:focus {
+    			outline: none;
+				}
         .flex-container {
         	display: flex;
         	flex-direction: column;
@@ -101,6 +103,39 @@
         	font-family: 'Cabin', sans-serif;
         	font-size: 2rem;
         }
+        button {
+				  background: #3498db;
+				  background-image: -webkit-linear-gradient(top, #3498db, #113f5c);
+				  background-image: -moz-linear-gradient(top, #3498db, #113f5c);
+				  background-image: -ms-linear-gradient(top, #3498db, #113f5c);
+				  background-image: -o-linear-gradient(top, #3498db, #113f5c);
+				  background-image: linear-gradient(to bottom, #3498db, #113f5c);
+				  -webkit-border-radius: 8;
+				  -moz-border-radius: 8;
+				  border-radius: 8px;
+				  font-family: Arial;
+				  color: #ffffff;
+				  font-size: 20px;
+				  padding: 10px 20px 10px 20px;
+				  text-decoration: none;
+				}
+
+				button:hover {
+				  background: #3cb0fd;
+				  background-image: -webkit-linear-gradient(top, #3cb0fd, #12507a);
+				  background-image: -moz-linear-gradient(top, #3cb0fd, #12507a);
+				  background-image: -ms-linear-gradient(top, #3cb0fd, #12507a);
+				  background-image: -o-linear-gradient(top, #3cb0fd, #12507a);
+				  background-image: linear-gradient(to bottom, #3cb0fd, #12507a);
+				  text-decoration: none;
+				}
+				aside {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: auto;
+					flex-wrap: wrap;
+				}
     </style>
 </head>
 <body>
@@ -130,23 +165,24 @@
 		<section id="description">
 			<article>
 				<h1>The problem we face</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolorum illum iure ad natus culpa ipsa aliquam magnam veritatis quae et, esse autem excepturi iste rem fugiat laboriosam officia blanditiis!</p>
+				<p>An interactive web-based platform showing areas of job growth in Australia</p>
 			</article>
 		</section>	
 		<section id="visualisation">
 			<div id='map'></div>
 			<aside class="menu">
-				<select>
-				  <option value="Dataset1">DataSet1</option>
-				  <option value="Dataset2">Dataset2</option>
-				  <option value="Dataset3">Dataset3</option>
-				  <option value="Dataset4">Dataset4</option>
-				</select>
+					<button id="yearButton09" value="2009">2009</button>
+					<button id="yearButton10" value="2010">2010</button>
+					<button id="yearButton11" value="2011">2011</button>
+					<button id="yearButton12" value="2012">2012</button>
+					<button id="yearButton13" value="2013">2013</button>
+					<button id="yearButton14" value="2014">2014</button>
 			</aside>			
 		</section>
 		<section id="team">	
 		</section>
 	</div>
+	<script src="outerWest.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>
